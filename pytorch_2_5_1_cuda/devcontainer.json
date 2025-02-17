@@ -36,6 +36,6 @@
     // Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
     // "remoteUser": "devcontainer"
     // "mounts": [
-	// 	"source=/home/david/Documents/west_90degrees_first,target=/data,type=bind,consistency=cached"
+	// 	"source=/home/david/Documents/,target=/data,type=bind,consistency=cached"
 	// ]
 }
