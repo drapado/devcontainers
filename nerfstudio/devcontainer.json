@@ -6,7 +6,7 @@
     // 	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
     // 	"dockerfile": "../Dockerfile"
     // },
-    "image": "nvidia/cuda:12.6.2-cudnn-devel-ubuntu24.04",
+    "image": "ghcr.io/nerfstudio-project/nerfstudio:latest",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -21,14 +21,14 @@
         "--gpus",
         "all",
         "--name",
-        "ubuntu24_cuda12_6",
-        "--shm-size=8g", // Adjust the size as needed
+        "nerfstudio",
+        "--shm-size=12g", // Adjust the size as needed
         "--ipc=host"
     ],
     // Features to add to the dev container. More info: https://containers.dev/features.
     // "features": {},
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    // "forwardPorts": [],
+    "forwardPorts": [7007],
     // Uncomment the next line to run commands after the container is created.
     "postCreateCommand": "apt-get update && apt-get install -y git wget"
     // Configure tool-specific properties.
